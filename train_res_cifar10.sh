@@ -1,0 +1,11 @@
+CUDA_VISIBLE_DEVICES=1 python main_triplet_attn_kl.py \
+--arch resnet50 \
+--optimizer sgd \
+--lr 0.03 \
+--batch_size_per_gpu 128 \
+--weight_decay 1e-4 \
+--weight_decay_end 1e-4 \
+--global_crops_scale 0.14 1 \
+--local_crops_scale 0.05 0.14 \
+--data_path /mnt/share/et21-lijl/Cls_Dataset \
+--output_dir /home/et21-lijl/Documents/dino/model_saving/cifar10_3208
